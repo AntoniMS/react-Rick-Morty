@@ -6,6 +6,7 @@ import "./CharactersPage.scss";
 
 export default function CharactersPage() {
   const [characters, setCharacters] = useState([]);
+  const [totalPages, setTotalPages] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
 
   const getCharacters = async (newPage = 1) => {
@@ -14,6 +15,7 @@ export default function CharactersPage() {
     );
     console.log(res.data.results);
     setCharacters(res.data.results);
+    setTotalPages(res.data.info);
     
     
   };
@@ -35,7 +37,7 @@ export default function CharactersPage() {
         </div>
       ) : (
         <div>
-          <Pagination getData={getCharacters} />
+          <Pagination getCharacters={getCharacters} totalPages = {totalPages} />
           <Gallery list={characters} />
         </div>
       )}
