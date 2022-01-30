@@ -1,0 +1,27 @@
+.c-header {
+  background: linear-gradient(to top, #82d300, #69a101ce);
+
+  width: 100%;
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+
+    .link {
+      color: rgb(250, 255, 232);
+      font-size: 1.4rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    .link:hover {
+      color: #fff01c;
+      font-size: 1.33rem;
+      font-weight: bolder;
+      transition: all 0.3s;
+    }
+  }
+}
