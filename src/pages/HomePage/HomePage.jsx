@@ -13,4 +13,5 @@ export default function HomePage() {
             alt="RM home page"
           />
   </div>;
+
 }
